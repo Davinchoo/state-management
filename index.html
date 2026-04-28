@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Manejo de Estado</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
   <header>
     <h1>Manejo de Estado</h1>
   </header>
 
   <main>
+
     <!-- Concepto -->
     <section id="concepto">
+
       <h2>¿Qué es el Estado?</h2>
+
       <p>
-        El estado es toda la información que una aplicación necesita para funcionar en un momento determinado. 
+        El estado es toda la información que una aplicación necesita para funcionar en un momento determinado.
         Controla cómo se muestran y actualizan los componentes.
       </p>
+
       <img src="images/estado.png" alt="Diagrama de flujo del estado" width="500">
 
       <h3>Ejemplos de estado</h3>
+
       <ul>
         <li>Un usuario logueado (nombre, correo)</li>
         <li>Un carrito de compras (productos, cantidades)</li>
@@ -29,53 +37,112 @@
         <li>Un contador (valor actual)</li>
         <li>Datos cargados desde una API</li>
       </ul>
+
     </section>
 
-    <!-- Concepto manejo de estado -->
+    <!-- Manejo de estado -->
     <section id="manejo">
+
       <h2>¿Qué es manejo de estado?</h2>
+
       <p>
-        Es la forma en que una aplicación controla, actualiza y comparte los datos que representan su “estado” en un momento dado.
+        Es la forma en que una aplicación controla, actualiza y comparte los datos que representan su “estado”
+        en un momento dado.
       </p>
+
       <img src="images/manejo_estados.png" alt="Manejo de estados" width="500">
 
-      <h3>Ejemplo Interactivo</h3>
-      <p>Haz clic en el botón para cambiar el estado:</p>
-      <button id="btn">Cambiar Estado</button>
-      <p id="estado">Estado actual: Inactivo</p>
+      <!-- Ejemplo contador -->
+      <h3>Ejemplo 1: Contador</h3>
+
+      <p id="numero">0</p>
+
+      <button onclick="incrementar()">
+        Aumentar
+      </button>
+
+      <img src="images/Ejemplo_contador.png" alt="Ejemplo de contador" width="500">
+
+      <!-- Ejemplo formulario -->
+      <h3>Ejemplo 2: Formulario</h3>
+
+      <input type="text" id="nombre" placeholder="Escribe tu nombre">
+
+      <button onclick="mostrarNombre()">
+        Guardar
+      </button>
+
+      <p id="resultado"></p>
+
+      <img src="images/Ejemplo_Formulario.png" alt="Ejemplo de formulario" width="500">
+
+      <!-- Ejemplo botón activo -->
+      <h3>Ejemplo 3: Estado Activo/Inactivo</h3>
+
+      <button id="botonEstado" class="inactivo" onclick="cambiarEstado()">
+        Inactivo
+      </button>
+      <img src="images/Estado_activo_inactivo.png" alt="Estado activo inactivo" width="500" >
     </section>
 
-    <!-- Tipos de estado -->
-    <section id="tipos">
-      <h2>Tipos de Manejo de Estado</h2>
+      <!-- Tipos -->
+      <section id="tipos">
 
-      <h3>Estado local</h3>
-      <p>Son los datos que pertenecen a un solo componente o módulo.</p>    
-      <img src="images/estado_local.png" alt="Estado local" width="400">
+        <h2>Tipos de Manejo de Estado</h2>
 
-      <h3>Estado global</h3>
-      <p>Son los datos compartidos entre varios componentes. Ejemplo: el usuario autenticado en toda la aplicación.</p>    
-      <img src="images/estado_global.png" alt="Estado global" width="400">
+        <h3>Estado local</h3>
+        <p>Son los datos que pertenecen a un solo componente o módulo.</p>
 
-      <h3>Estado persistente</h3>
-      <p>Son los datos que se guardan en almacenamiento externo (base de datos, localStorage) para que no se pierdan al cerrar la aplicación.</p>    
-      <img src="images/estado_persistente.png" alt="Estado persistente" width="400">
-    </section>
+        <img src="images/estado_local.png" alt="Estado local" width="400">
 
-    <!-- Importancia -->
-    <section id="importancia">
-      <h2>¿Por qué es importante?</h2>
-      <ul>
-        <li><strong>Organización:</strong> Evita que los datos se desordenen en aplicaciones grandes.</li>
-        <li><strong>Consistencia:</strong> Garantiza que todos los componentes muestren la misma información.</li>
-        <li><strong>Escalabilidad:</strong> Permite que la aplicación crezca sin volverse caótica.</li>
-        <li><strong>Experiencia de usuario:</strong> Asegura que las interacciones sean fluidas y predecibles.</li>
-      </ul>
-    </section>
+        <h3>Estado global</h3>
+
+        <p>
+          Son los datos compartidos entre varios componentes.
+          Ejemplo: el usuario autenticado en toda la aplicación.
+        </p>
+
+        <img src="images/estado_global.png" alt="Estado global" width="400">
+
+        <h3>Estado persistente</h3>
+
+        <p>
+          Son los datos que se guardan en almacenamiento externo
+          para que no se pierdan al cerrar la aplicación.
+        </p>
+
+        <img src="images/estado_persistente.png" alt="Estado persistente" width="400">
+
+      </section>
+
+      <!-- Importancia -->
+      <section id="importancia">
+
+        <h2>¿Por qué es importante?</h2>
+
+        <ul>
+          <li><strong>Organización:</strong> Evita que los datos se desordenen.</li>
+
+          <li><strong>Consistencia:</strong>
+            Garantiza que todos los componentes muestren la misma información.
+          </li>
+
+          <li><strong>Escalabilidad:</strong>
+            Permite que la aplicación crezca sin volverse caótica.
+          </li>
+
+          <li><strong>Experiencia de usuario:</strong>
+            Asegura interacciones fluidas y predecibles.
+          </li>
+        </ul>
+
+      </section>
+
   </main>
 
   <script src="script.js"></script>
-</body>
-</html>
 
+</body>
+
+</html>
 
