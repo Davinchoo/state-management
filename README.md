@@ -31,4 +31,4 @@ La página incluye:
 ## 🛠️ Instalación y uso
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/tuusuario/state-management.git
+   git clone https://github.com/Davinchoo/state-management.git
