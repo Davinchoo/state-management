@@ -1,27 +1,43 @@
-// Ejemplo simple de cambio de estado
-const btn = document.getElementById("btn");
-const estado = document.getElementById("estado");
-
-let activo = false;
-
-btn.addEventListener("click", () => {
-  activo = !activo;
-  estado.textContent = `Estado actual: ${activo ? "Activo" : "Inactivo"}`;
-});
-
-// Ejemplo de contador
-const incrementar = document.getElementById("incrementar");
-const decrementar = document.getElementById("decrementar");
-const valor = document.getElementById("valor");
-
+// CONTADOR
 let contador = 0;
 
-incrementar.addEventListener("click", () => {
+function incrementar() {
   contador++;
-  valor.textContent = `Valor: ${contador}`;
-});
+  document.getElementById("numero").textContent = contador;
+}
 
-decrementar.addEventListener("click", () => {
-  contador--;
-  valor.textContent = `Valor: ${contador}`;
-});
+
+// FORMULARIO
+let estadoNombre = "";
+
+function mostrarNombre() {
+
+  estadoNombre = document.getElementById("nombre").value;
+
+  document.getElementById("resultado").textContent =
+    "Hola " + estadoNombre;
+}
+
+
+// BOTÓN ACTIVO / INACTIVO
+let activo = false;
+
+function cambiarEstado() {
+
+  activo = !activo;
+
+  const boton = document.getElementById("botonEstado");
+
+  if (activo) {
+
+    boton.textContent = "Activo";
+    boton.classList.remove("inactivo");
+    boton.classList.add("activo");
+
+  } else {
+
+    boton.textContent = "Inactivo";
+    boton.classList.remove("activo");
+    boton.classList.add("inactivo");
+  }
+}
